@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F53F5CFA9A7B1854C7DD616 /* Pods_clog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122857AC2AB4B1890010C7E1 /* Pods_clog.framework */; };
 		6C58448A1E8CF0AF008A0D0C /* clog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5844881E8CF0AF008A0D0C /* clog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C5844911E8CF0C6008A0D0C /* CLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5844901E8CF0C6008A0D0C /* CLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		122857AC2AB4B1890010C7E1 /* Pods_clog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5844851E8CF0AF008A0D0C /* clog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = clog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5844881E8CF0AF008A0D0C /* clog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = clog.h; sourceTree = "<group>"; };
 		6C5844891E8CF0AF008A0D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C5844901E8CF0C6008A0D0C /* CLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLog.swift; sourceTree = "<group>"; };
+		BE6E6404FC0F8BC29D1ADFC4 /* Pods-clog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clog.release.xcconfig"; path = "Pods/Target Support Files/Pods-clog/Pods-clog.release.xcconfig"; sourceTree = "<group>"; };
+		C74459E82BA59C9AC9C12D1C /* Pods-clog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clog/Pods-clog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F53F5CFA9A7B1854C7DD616 /* Pods_clog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4648CB68795439972224B94B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C74459E82BA59C9AC9C12D1C /* Pods-clog.debug.xcconfig */,
+				BE6E6404FC0F8BC29D1ADFC4 /* Pods-clog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4FB807225B56A9B087BC280C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				122857AC2AB4B1890010C7E1 /* Pods_clog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6C58447B1E8CF0AF008A0D0C = {
 			isa = PBXGroup;
 			children = (
 				6C5844871E8CF0AF008A0D0C /* clog */,
 				6C5844861E8CF0AF008A0D0C /* Products */,
+				4648CB68795439972224B94B /* Pods */,
+				4FB807225B56A9B087BC280C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,6 +72,7 @@
 		6C5844871E8CF0AF008A0D0C /* clog */ = {
 			isa = PBXGroup;
 			children = (
+				6C5844901E8CF0C6008A0D0C /* CLog.swift */,
 				6C5844881E8CF0AF008A0D0C /* clog.h */,
 				6C5844891E8CF0AF008A0D0C /* Info.plist */,
 			);
@@ -70,10 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C58448D1E8CF0AF008A0D0C /* Build configuration list for PBXNativeTarget "clog" */;
 			buildPhases = (
+				A0E4560E7FC7A26768164A06 /* [CP] Check Pods Manifest.lock */,
 				6C5844801E8CF0AF008A0D0C /* Sources */,
 				6C5844811E8CF0AF008A0D0C /* Frameworks */,
 				6C5844821E8CF0AF008A0D0C /* Headers */,
 				6C5844831E8CF0AF008A0D0C /* Resources */,
+				36C4C761DE8D7AD7D55D29B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +125,7 @@
 					6C5844841E8CF0AF008A0D0C = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = R37N8274HF;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,11 +157,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36C4C761DE8D7AD7D55D29B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-clog/Pods-clog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0E4560E7FC7A26768164A06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6C5844801E8CF0AF008A0D0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C5844911E8CF0C6008A0D0C /* CLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +305,9 @@
 		};
 		6C58448E1E8CF0AF008A0D0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C74459E82BA59C9AC9C12D1C /* Pods-clog.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = R37N8274HF;
@@ -254,13 +320,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lez.clog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		6C58448F1E8CF0AF008A0D0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE6E6404FC0F8BC29D1ADFC4 /* Pods-clog.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = R37N8274HF;
