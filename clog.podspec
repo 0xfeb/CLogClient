@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "CLog"
+  s.name         = "clog"
   s.version      = "0.0.1"
   s.summary      = "WebLog library client"
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/wangyuanou/Coastline.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/wangyuanou/CLogClient.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Coastline", "Coastline/*.h", "Coastline/**/*.{h,m,swift}"
-  s.exclude_files = "Coastline/Exclude"
+  s.source_files  = "clog", "clog/*.h", "clog/**/*.{h,m,swift}"
+  s.exclude_files = "clog/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -132,6 +132,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency "KeychainAccess"
+  s.dependency "Coastline"
 
 end
